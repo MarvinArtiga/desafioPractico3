@@ -1,20 +1,20 @@
 package sv.edu.udb.repository.domain;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-@Table(name = "materia")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Materia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String nombre;
 
-    public void setNombre(String geografía) {
-    }
 
-    public Object getId() {
-        return null;
-    }
 }

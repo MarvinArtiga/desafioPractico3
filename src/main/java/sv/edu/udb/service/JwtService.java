@@ -20,13 +20,13 @@ import java.util.function.Function;
 @RequiredArgsConstructor
 public class JwtService {
 
-    @Value("${jwt.secret:defaultSecretKey}") // Valor por defecto
+    @Value("${jwt.secret:defaultSecretKey}") // Valor por defecto 
     private String secretKey;
 
-    @Value("${jwt.expiration:86400000}") // 24 horas por defecto
+    @Value("${jwt.expiration:86400000}") // 24 horas por defecto 
     private long jwtExpiration;
 
-    @Value("${jwt.refresh-expiration:604800000}") // 7 días por defecto
+    @Value("${jwt.refresh-expiration:604800000}") // 7 días por defecto 
     private long refreshExpiration;
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -93,4 +93,4 @@ public class JwtService {
         byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
     }
-}
+} 

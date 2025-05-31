@@ -1,22 +1,13 @@
 package sv.edu.udb.controller.request;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-@Getter
-@Setter
-@Builder(toBuilder = true)
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true) //Ignora propiedades desconocidas
-@JsonInclude(JsonInclude.Include.NON_NULL) //No incluye los valoros devueltos nulos
-@Data
 public class MateriaRequest {
-    @NotBlank //No acepta valores nulos ni vacios
+    @NotBlank(message = "El nombre es obligatorio")
     private String nombre;
-
 }

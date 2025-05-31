@@ -47,7 +47,7 @@ public class AlumnoServiceImpl implements AlumnoService {
         alumnoToUpdate.setApellido(alumnoRequest.getApellido());
 //        alumnoToUpdate.setIdMateria(alumnoRequest.getIdMateria());
         alumnoRepository.save(alumnoToUpdate);
-        alumnoRepository.save(alumnoToUpdate);
+//        alumnoRepository.save(alumnoToUpdate);
         return alumnoMapper.toAlumnoResponse(alumnoToUpdate);
     }
     @Override

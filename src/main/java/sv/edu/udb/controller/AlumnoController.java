@@ -17,6 +17,8 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 
 public class AlumnoController {
     private final AlumnoService alumnoService;
+    private AlumnoService alumnoRepository;
+
     @GetMapping
     public List<AlumnoResponse> findAllAlumno() {
         return alumnoService.findAll();
@@ -40,4 +42,6 @@ public class AlumnoController {
     public void deleteAlumno(@PathVariable(name = "id") final Long id) {
         alumnoService.delete(id);
     }
+
+
 }

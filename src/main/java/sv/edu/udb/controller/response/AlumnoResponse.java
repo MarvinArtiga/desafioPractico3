@@ -8,8 +8,9 @@ import lombok.experimental.FieldNameConstants;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldNameConstants //Para generar constantes con los nombres de las propiedades
+@Data
 public class AlumnoResponse {
-    private String Nombre;
-    private String Apellido;
+    private String nombre;
+    private String apellido;
 //    private Long idMateria;
 }

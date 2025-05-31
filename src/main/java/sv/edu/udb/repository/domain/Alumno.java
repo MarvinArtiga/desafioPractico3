@@ -11,7 +11,7 @@ import lombok.*;
 @Data
 public class Alumno {
     @Id //definicion del id (es una anotacion obligatoria si se usa entity)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE) //Generacion automatica de id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Generacion automatica de id
     private Long id;
     @Column(nullable = false)
     private String nombre;
